@@ -1,0 +1,28 @@
+// Path
+// --------------------------
+
+// Usage
+// =======================================================
+
+// * Background
+// background-image: url('#{$image-path}/background.png');
+
+// * Font face
+// @font-face {
+//     font-family: 'Lato Medium';
+//     src: url('#{$font-path}/Lato-Medium.ttf');
+// }
+$image-path:		"../../images" !default;
+$font-path:			"../../fonts" !default;
+
+// --------------------------
+// Colors
+// -------------------------- 
+$c-white: #FFFFFF;
+$c-black: #101010; 
+$c-green: #85CE25;
+
+// --------------------------
+// Fonts
+// --------------------------
+$Open-sans: 'Open Sans', sans-serif;

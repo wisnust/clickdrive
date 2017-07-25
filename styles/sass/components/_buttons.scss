@@ -1,0 +1,10 @@
+.btn-primary {
+	@include button-variant($c-white, $c-green, $c-green);
+	border-radius: 100px;
+	font-size: 18px;
+	font-weight: 600;
+	height: 42px;
+	line-height: 24px;
+	width: 172px;
+	@include transition(all .3s);
+}

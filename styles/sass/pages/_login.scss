@@ -1,0 +1,146 @@
+.login-page {
+	background-image: url('#{$image-path}/login-bg.jpg');
+	background-size: cover;
+	background-position: center center;
+	color: $c-white;
+	> .container {
+		padding: 0;
+		width: 830px;
+		.login-panel {
+			background: $c-black;
+			border-radius: 6px;
+			margin: 255px auto 270px;
+			text-align: center;
+			> .row {
+				height: 100%;
+				@include flexbox;
+				@include justify-content(center);
+				@include align-items(center);
+				> .col-sm-6 {
+					height: 100%;
+					#login-slider, form {
+						padding: 65px 50px 50px;
+						img {
+							margin: 0 auto;
+						}
+					}
+
+					// Login slider
+					#login-slider {
+						top: -20px;
+						.logo-slider {
+							height: 80px;
+							margin-bottom: 40px;
+							width: 94px;
+						}
+						p {
+							font: {
+								family: "Open Sans";
+								size: 23px;
+								weight: 600;
+							}
+							line-height: 41px;
+						}
+						.carousel-indicators {
+							margin: 0 auto;
+							@include position(absolute, $right: 0, $bottom: -75px, $left: 0);
+							li {
+								background-color: #2B2D2F;
+								border: 0;
+								height: 12px;
+								width: 12px;
+								@include transition(background-color .3s);
+								&:hover {
+									background-color: lighten(#2B2D2F, 15%);
+								}
+								&.active {
+									border: 0;
+									background-color: $c-green;
+									margin: 1px;
+									&:hover {
+										background-color: $c-green;
+									}
+								}
+								&:nth-of-type(2) {
+									margin: 1px 15px;
+								}
+							}
+						}
+					}
+
+					// login form
+					.login-form {
+						img {
+							margin-bottom: 50px;
+							width: 185px;
+						}
+						.form-group {
+							box-shadow: 0 0 1px transparent;
+							margin-bottom: 30px;
+							position: relative;
+							overflow: hidden;
+							vertical-align: middle;
+							@include transform(perspective(1px) translateZ(0));
+							.form-control {
+								background: transparent;
+								border: transparent;
+								color: #9AA5AE;
+								font-size: 16px;
+								height: 45px;
+								line-height: 22px;
+								padding-left: 0;
+								padding-bottom: 0;
+							}
+							.control-label {
+								color: #54585B;
+								cursor: text;
+								font-size: 16px;
+								line-height: 22px;
+								@include position(absolute, $top: 15px, $left: 0);
+								@include transition(all .3s);
+							}
+							.bar {
+								background: #54585B;
+								content: "";
+								height: 1px;
+								z-index: -1;
+								@include position(absolute, $right: 0, $bottom: 0, $left: 0);
+								@include transform(translateY(0px));
+								@include transition(all .3s);
+							}
+							.form-control {
+								&:focus, &.has-value {
+									~ .control-label {
+										font-size: 12px;
+										line-height: 17px;
+										@include transform(translateY(-18px));
+									}
+									~ .bar {
+										@include transform(translateY(0));
+									}
+								}
+							}
+							.btn-primary {
+								margin-top: 30px;
+							}
+							.forgot {
+								color: #737B82;
+								display: inline-block;
+								font-size: 14px;
+								margin-top: 5px;
+								margin-bottom: -30px;
+								line-height: 19px;
+							}
+							&:last-of-type {
+								margin-bottom: 0;
+							}
+						}
+					}
+					&:last-of-type {
+						border-left: 1px solid #1B1B1B;
+					}
+				}
+			}
+		}
+	}
+}
